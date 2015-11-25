@@ -1,19 +1,87 @@
+<!DOCTYPE html>
 <html>
-<head>
-  <title>Mash Game</title>
+  <head>
+    <title>Mash project</title>
+    <link href="MASH.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+  </head>
+  <body>
+
+	<div id="titlebar">
+		
+		<div><span id="title">MASH</span>&nbsp&nbsp&nbsp&nbsp...the game that determines your inevitable future!</span></div>
+
+	</div>
+    
+       <div id="housediv">
+           <h3>Where will you live?</h3>
+           <div style="white-space: nowrap;">Pick a number 1-4.</div>
+        <select name="dropdown" id="selector" size=1>
+            <option>Select</option>
+            <option value="1">1</option>
+             <option value="2">2</option>
+            <option value="3">3</option>
+           <option value="4">4</option>
+      </select>
+    </div>
+
+  		 </br></br>
+      
+
+  		<div id="houseimg"></div>
+    
+   
+    <div id="housetext">
+        <div id="housename"></div>
+        <div id="housecomment"></div>
+    </div>
+   
+      </br></br></br></br></br></br></br></br></br>
+       
+            
+      
+         
+
+         <script>
+
+$('select[name="dropdown"]').change(function() {
+  if ($(this).val() == "1") {
+    $('#houseimg').html('<img src = "https://goo.gl/lnnQ0p">');
+    $('#housename').html('Mansion');
+    $('#housecomment').html('Money can&rsquo;t buy happiness, but I&rsquo;d much rather cry in a mansion.');
+    document.getElementById('selector').disabled=true;
+  }
+  else if ($(this).val() == "2") {
+    $('#houseimg').html('<img src = "https://goo.gl/VWu3jA">');
+    $('#housename').html('The White House');
+    $('#housecomment').html('The perfect zombie bunker! No one would come here looking for brains...');
+    document.getElementById('selector').disabled=true;
+  }
+  else if ($(this).val() == "3") {
+    $('#houseimg').html('<img src = "https://goo.gl/LKvTVu">');
+    $('#housename').html('Trailer');
+    $('#housecomment').html('Hey your trailer park called, it seems their trash is missing.');
+    document.getElementById('selector').disabled=true;
+  }
+  else if ($(this).val() == "4") {
+    $('#houseimg').html('<img src = "https://goo.gl/kNjp4a">');
+    $('#housename').html('Cardboard Box');
+    $('#housecomment').html('Your house is so small, when you drop a kleenex you have wall to wall carpet');
+    document.getElementById('selector').disabled=true;
+  }
+});
+
+        </script>
+</html> 
   
-<script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+  
 
-</head>
-<body>
-<
+      
+      
+      
 
-<script>  
-
-
+        </script>
 
 
-</script>
-
-</body>
-</html>
+    </body>
+</html> 
