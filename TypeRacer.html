@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Type Racer</title>
+  
+  <style>
+
+    
+  </style>
+  </head>
+  <body>
+
+<div id="output">something is happening</div>
+
+<input id="type">
+
+<label></label>
+
+
+
+
+<script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+  
+
+<script>
+
+
+$('button#go').on('click', function(){   $('body').css("background-color",$('input#color').val() ) });
+
+$('body').on('keypress', function (e) {
+  $('label').text(e.keyCode)
+})
+
+$('input#type').on('keypress', function(e){
+  var hi = String.fromCharCode(e.keyCode)
+  $('#output').append(hi);
+})
+  
+  </script>
+  
+  
+  </body>
+  </html>

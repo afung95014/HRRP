@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Day 3</title>
+  
+  <style>
+    #color {
+      color: red;
+    }
+
+    #puppy {
+      position: fixed;
+    }
+  </style>
+  </head>
+  <body>
+ <!-- <div id="target">click me!</div>
+  <img class="targetdiv" src="https://c1.staticflickr.com/1/26/61056391_31343afdc6_b.jpg" style="width:300px">
+  
+  <div class="targetdiv" id="money">show me the money!</div>
+  <img class src="http://www.bloomberg.com/ss/09/06/0604_oprah_tech_effect/image/intro.jpg"style="width:300px">
+
+  <div class="targetdiv" id="oprah">show me the oprah...?</div>
+
+  <div class="targetdiv" id="opera">just kidding. show me the opera.</div>
+   --> 
+
+<button id="go">Click me!</button>
+
+<input id="color">
+
+<input id="type">
+
+<label></label>
+
+<div id="output">something is happening</div>
+
+<p id="1">hello, it's me</p>
+<p id="2">hello, I'm sorry</p>
+<p id="3">hello, I'm in California dreaming</p>
+<p id="4">hello, can you hear me?</p>
+<p id="5">hello, it's so typical of me to talk about myself</p>
+
+<script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+  
+
+<script>
+
+
+$('button#go').on('click', function(){   $('body').css("background-color",$('input#color').val() ) });
+
+$('body').on('keypress', function (e) {
+  $('label').text(e.keyCode)
+})
+
+$('input#type').on('keypress', function(e){
+  var hi = String.fromCharCode(e.keyCode)
+  $('#output').append(hi);
+})
+  
+  </script>
+  
+  
+  </body>
+  </html>

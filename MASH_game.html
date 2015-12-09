@@ -9,14 +9,14 @@
 
 	<div id="titlebar">
 		
-		<div><span id="title">MASH</span>&nbsp&nbsp&nbsp&nbsp...the game that determines your inevitable future!</span></div>
+		<div><span id="title">MASH</span>&nbsp&nbsp&nbsp&nbsp...the elementary school game you used to play, now even less mature!</span></div>
 
 	</div>
     
-       <div id="housediv">
+       <div class="formatdiv">
            <h3>Where will you live?</h3>
            <div style="white-space: nowrap;">Pick a number 1-4.</div>
-        <select name="dropdown" id="selector" size=1>
+        <select name="dropdown1" id="selector" size=1>
             <option>Select</option>
             <option value="1">1</option>
              <option value="2">2</option>
@@ -28,23 +28,99 @@
   		 </br></br>
       
 
-  		<div id="houseimg"></div>
+  		<div class="img" id="houseimg"></div>
     
    
-    <div id="housetext">
-        <div id="housename"></div>
-        <div id="housecomment"></div>
+    <div class="text" id="housetext">
+        <div class="name" id="housename"></div>
+        <div class="comment" id="housecomment"></div>
     </div>
    
-      </br></br></br></br></br></br></br></br></br>
-       
-            
+      </br></br></br></br>
+ 
+ <div class="formatdiv">
+           <h3>What pet will you own?</h3>
+           <div style="white-space: nowrap;">Pick a color.</div>
+        <select name="dropdown2" id="selector2" size=1>
+            <option>Select</option>
+            <option value="1">Red</option>
+             <option value="2">Blue</option>
+            <option value="3">Green</option>
+           <option value="4">Yellow</option>
+      </select>
+    </div>
+
+       </br></br>
       
-         
+
+      <div class="img" id="petimg"></div>
+    
+   
+    <div class="text" id="pettext">
+        <div class="name" id="petname"></div>
+        <div class="comment" id="petcomment"></div>      
+            
+     </div>
+   
+      </br></br></br></br>
+ 
+  <div class="formatdiv">
+           <h3>What will you do for a living?</h3>
+           <div style="white-space: nowrap;">Pick your poison.</div>
+        <select name="dropdown3" id="selector3" size=1>
+            <option>Select</option>
+            <option value="1">Whiskey Sour</option>
+             <option value="2">Dry Martini. Shaken, not stirred</option>
+            <option value="3">Mississippi Moonshine</option>
+           <option value="4">24 oz PBR in a brown bag</option>
+      </select>
+    </div>
+
+       </br></br>
+      
+
+      <div class="img" id="jobimg"></div>
+    
+   
+    <div class="text" id="jobtext">
+        <div class="name" id="jobname"></div>
+        <div class="comment" id="jobcomment"></div>
+    </div>
+   
+      </br></br></br></br>
+           <div class="formatdiv">
+           <h3>Who will you marry?</h3>
+           <div style="white-space: nowrap;">Pick your food porn.</div>
+        <select name="dropdown4" id="selector4" size=1>
+            <option>Select</option>
+            <option value="1">Chocolate ice cream w/ brownies</option>
+             <option value="2">Deep dish pizza and craft beer</option>
+            <option value="3">Grilled cheese and tomato soup</option>
+           <option value="4">Anything wrapped in bacon</option>
+      </select>
+    </div>
+
+       </br></br>
+      
+
+      <div class="img" id="marryimg"></div>
+    
+   
+    <div class="text" id="marrytext">
+        <div class="name" id="marryname"></div>
+        <div class="comment" id="marrycomment"></div>
+    </div>
+   
+      </br></br></br></br></br></br>
+
+
+      <div id="result" style='display:none'>Congrats! You live in a </div>
+
+
 
          <script>
 
-$('select[name="dropdown"]').change(function() {
+$('select[name="dropdown1"]').change(function() {
   if ($(this).val() == "1") {
     $('#houseimg').html('<img src = "https://goo.gl/lnnQ0p">');
     $('#housename').html('Mansion');
@@ -53,7 +129,7 @@ $('select[name="dropdown"]').change(function() {
   }
   else if ($(this).val() == "2") {
     $('#houseimg').html('<img src = "https://goo.gl/VWu3jA">');
-    $('#housename').html('The White House');
+    $('#housename').html('White House');
     $('#housecomment').html('The perfect zombie bunker! No one would come here looking for brains...');
     document.getElementById('selector').disabled=true;
   }
@@ -70,6 +146,95 @@ $('select[name="dropdown"]').change(function() {
     document.getElementById('selector').disabled=true;
   }
 });
+
+$('select[name="dropdown2"]').change(function() {
+  if ($(this).val() == "1") {
+    $('#petimg').html('<img src = "https://media.giphy.com/media/Wj2VpMApaSeNq/giphy.gif">');
+    $('#petname').html('CORGI!!');
+    $('#petcomment').html('AWWWWWWWW');
+    document.getElementById('selector2').disabled=true;
+  }
+  else if ($(this).val() == "2") {
+    $('#petimg').html('<img src = "https://media.giphy.com/media/8L3dj9E9IueiY/giphy.gif" style="width:300px">');
+    $('#petname').html('Narwhal');
+    $('#petcomment').html('The mythic unicorn of the sea');
+    document.getElementById('selector2').disabled=true;
+  }
+  else if ($(this).val() == "3") {
+    $('#petimg').html('<img src = "https://media.giphy.com/media/pcLiDN3VlseC4/giphy.gif" style="width:300px">');
+    $('#petname').html('Pterodactyl');
+    $('#petcomment').html('Hey your trailer park called, it seems their trash is missing.');
+    document.getElementById('selector2').disabled=true;
+  }
+  else if ($(this).val() == "4") {
+    $('#petimg').html('<img src = "https://media.giphy.com/media/Jxt4LYaJ7jCI8/giphy.gif" style="width:300px">');
+    $('#petname').html('Red Panda');
+    $('#petcomment').html('So cute');
+    document.getElementById('selector2').disabled=true;
+  }
+});
+
+$('select[name="dropdown3"]').change(function() {
+  if ($(this).val() == "1") {
+    $('#jobimg').html('<img src = "https://s-media-cache-ak0.pinimg.com/736x/cd/05/14/cd0514f52a6b80c8994a9124636d45eb.jpg" style="width:300px">');
+    $('#jobname').html('Disneyland Face Character');
+    $('#jobcomment').html('AWWWWWWWW');
+    document.getElementById('selector3').disabled=true;
+  }
+  else if ($(this).val() == "2") {
+    $('#jobimg').html('<img src = "http://d152j5tfobgaot.cloudfront.net/wp-content/uploads/2014/04/MarketingToolsForEntrepreneurs.jpg" style="width:300px">');
+    $('#jobname').html('Startup Founder');
+    $('#jobcomment').html('The mythic unicorn of the sea');
+    document.getElementById('selector3').disabled=true;
+  }
+  else if ($(this).val() == "3") {
+    $('#jobimg').html('<img src = "http://s.sk-gaming.com/image/image/86dcf39a304b3009x.jpg" style="width:350px">');
+    $('#jobname').html('Professional Gamer');
+    $('#jobcomment').html('Bro, what&rsquo;s your APM? Do you even game?');
+    document.getElementById('selector3').disabled=true;
+  }
+  else if ($(this).val() == "4") {
+    $('#jobimg').html('<img src = "https://bloggywoggydoodah.files.wordpress.com/2011/12/santa.jpg?w=611">');
+    $('#jobname').html('Shopping Mall Santa');
+    $('#jobcomment').html('So cute');
+    document.getElementById('selector3').disabled=true;
+  }
+});
+
+$('select[name="dropdown4"]').change(function() {
+  if ($(this).val() == "1") {
+    $('#marryimg').html('<img src = "http://i.huffpost.com/gadgets/slideshows/377030/slide_377030_4431666_free.jpg" style="height:200px">');
+    $('#marryname').html('Ryan Gosling');
+    $('#marrycomment').html('Seriously?! It&rsquo;s like you&rsquo;re photoshopped!');
+    document.getElementById('selector4').disabled=true;
+  }
+  else if ($(this).val() == "2") {
+    $('#marryimg').html('<img src = "https://s-media-cache-ak0.pinimg.com/236x/ed/b2/4e/edb24e7d6e9e356f31f095f4f0b7b30e.jpg" style="height:200px">');
+    $('#marryname').html('Jennifer Lawrence');
+    $('#marrycomment').html('');
+    document.getElementById('selector4').disabled=true;
+  }
+  else if ($(this).val() == "3") {
+    $('#marryimg').html('<img src = "https://upload.wikimedia.org/wikipedia/commons/e/ef/Justin_Bieber_mugshot,_front.jpg" style="height:200px">');
+    $('#marryname').html('Justin Bieber');
+    $('#marrycomment').html('Is it too late to say sorry? Cuz I wanna pick again');
+    document.getElementById('selector4').disabled=true;
+  }
+  else if ($(this).val() == "4") {
+    
+    $('#marryimg').html('<img src = "http://www.ew.com/sites/default/files/i/2015/07/30/beyonce.jpg" style="height:200px">');
+    $('#marryname').html('Beyonce');
+    $('#marrycomment').html('Queen Bee');
+    document.getElementById('selector4').disabled=true;
+    
+}
+
+
+    $('#result').show();
+    $('#result').append($('#housename').html() + ' with a ' + $('#petname').html() + ". During the day, you work as a " + $('#jobname').html() + ", and at night you come home to " + $('#marryname').html() + ' in your bed.');
+
+   
+  });
 
         </script>
 </html> 
